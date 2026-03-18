@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-primary: #0b2c6f;
+    --brand-primary-soft: #1a438f;
+    --brand-secondary: #f4b400;
+    --brand-background: #ffffff;
+    --brand-surface: #f8fafc;
+    --brand-surface-alt: #eaf0ff;
+    --brand-text: #0f172a;
+    --brand-muted: #64748b;
+    --brand-border: #d7e0f0;
+    --neumo-light: rgba(255, 255, 255, 0.98);
+    --neumo-dark: rgba(166, 180, 212, 0.34);
+    --neumo-dark-strong: rgba(133, 151, 192, 0.42);
+
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+ 
+    --primary: 219 82% 24%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 44 96% 48%;
+    --secondary-foreground: 222 47% 11%;
+ 
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+ 
+    --accent: 214 95% 95%;
+    --accent-foreground: 219 82% 24%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 219 82% 24%;
+ 
+    --radius: 1rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans 3', sans-serif;
+    letter-spacing: -0.01em;
+    line-height: 1.6;
+    background-image:
+      radial-gradient(circle at top left, rgba(11, 44, 111, 0.08), transparent 26%),
+      radial-gradient(circle at top right, rgba(244, 180, 0, 0.1), transparent 18%),
+      linear-gradient(to bottom, #f8fbff, #eef4ff 42%, #f9fbff 100%);
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    @apply tracking-tight;
+}
+
+a {
+    color: inherit;
+}
+
+::selection {
+    background: rgba(244, 180, 0, 0.3);
+    color: var(--brand-primary);
+}
+
+.section-shell {
+  @apply border border-[#dbe4f0] bg-white/90 backdrop-blur-sm shadow-[0_24px_60px_-36px_rgba(11,44,111,0.32)];
+}
+
+.eyebrow {
+  @apply text-[11px] font-semibold uppercase tracking-[0.28em] text-[#64748b];
+}
+
+.minimal-grid {
+  background-image:
+    linear-gradient(rgba(11, 44, 111, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 44, 111, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .school-divider {
+    position: relative;
+  }
+
+  .school-divider::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 3px;
+    width: 96px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #f4b400 0%, rgba(244, 180, 0, 0.15) 100%);
+  }
+
+  .section-tint {
+    background: linear-gradient(180deg, rgba(234, 240, 255, 0.95) 0%, rgba(248, 251, 255, 0.98) 100%);
+  }
+
+  .section-navy {
+    background:
+      linear-gradient(135deg, rgba(11, 44, 111, 0.98) 0%, rgba(9, 34, 88, 0.98) 100%);
+  }
+
+  .neumo-surface {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(234, 240, 255, 0.82));
+    border: 1px solid rgba(215, 224, 240, 0.92);
+    box-shadow:
+      -10px -10px 20px var(--neumo-light),
+      12px 12px 24px var(--neumo-dark);
+  }
+
+  .neumo-surface-soft {
+    background: linear-gradient(145deg, rgba(248, 251, 255, 0.95), rgba(255, 255, 255, 0.95));
+    border: 1px solid rgba(219, 228, 240, 0.95);
+    box-shadow:
+      -8px -8px 18px rgba(255, 255, 255, 0.88),
+      10px 10px 22px rgba(166, 180, 212, 0.24);
+  }
+
+  .neumo-inset {
+    background: linear-gradient(145deg, rgba(236, 242, 255, 0.9), rgba(255, 255, 255, 0.95));
+    border: 1px solid rgba(215, 224, 240, 0.9);
+    box-shadow:
+      inset 5px 5px 12px rgba(184, 198, 225, 0.32),
+      inset -5px -5px 12px rgba(255, 255, 255, 0.92);
+  }
+
+  .card-premium {
+    @apply neumo-surface rounded-[2rem] transition-all duration-300 hover:-translate-y-1;
+    box-shadow:
+      -10px -10px 20px var(--neumo-light),
+      16px 16px 30px rgba(166, 180, 212, 0.34);
+  }
+
+  .card-pressed {
+    @apply neumo-inset rounded-[2rem] transition-all duration-300;
+  }
+
+  .button-neumo {
+    @apply inline-flex items-center justify-center rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy/20 focus-visible:ring-offset-2;
+    box-shadow:
+      -6px -6px 14px rgba(255, 255, 255, 0.92),
+      8px 8px 18px rgba(166, 180, 212, 0.28);
+  }
+
+  .button-neumo:hover {
+    transform: translateY(-1px);
+    box-shadow:
+      -6px -6px 14px rgba(255, 255, 255, 0.95),
+      12px 12px 22px rgba(133, 151, 192, 0.26);
+  }
+
+  .button-neumo:active {
+    transform: translateY(0);
+    box-shadow:
+      inset 4px 4px 10px rgba(166, 180, 212, 0.3),
+      inset -4px -4px 10px rgba(255, 255, 255, 0.9);
+  }
+
+  .button-primary {
+    @apply button-neumo bg-brand-navy px-6 py-3 text-white;
+  }
+
+  .button-primary:hover {
+    background: #123882;
+  }
+
+  .button-secondary {
+    @apply button-neumo bg-brand-gold px-6 py-3 text-brand-ink;
+  }
+
+  .button-secondary:hover {
+    background: #e0a600;
+  }
+
+  .button-outline {
+    @apply button-neumo border border-brand-gold/30 bg-white/90 px-6 py-3 text-brand-navy;
+  }
+
+  .button-outline:hover {
+    @apply bg-brand-tint;
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(14px);
+  }
+}
