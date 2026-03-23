@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const stats = [
   { value: '18+', label: 'Years of community trust' },
   { value: '1:25', label: 'Student-focused classroom mindset' },
-  { value: 'KG-VIII', label: 'Structured academic pathway' },
+  { value: 'Nursery-5th', label: 'Structured academic pathway' },
   { value: '100%', label: 'Commitment to values and discipline' },
 ];
 

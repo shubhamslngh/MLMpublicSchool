@@ -54,7 +54,7 @@ const Hero = () => {
                   <p className="mt-1 text-sm text-brand-muted">Strong academic foundation</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-brand-navy">KG to VIII</p>
+                  <p className="text-3xl font-bold text-brand-navy">Nursery to 5th</p>
                   <p className="mt-1 text-sm text-brand-muted">Guided academic progression</p>
                 </div>
                 <div>

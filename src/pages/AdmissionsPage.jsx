@@ -39,7 +39,7 @@ const AdmissionsPage = () => {
     }
   ];
 
-  const grades = ['KG', '1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th'];
+  const grades = ['Nursery', 'KG', '1st', '2nd', '3rd', '4th', '5th'];
 
   const handleChange = (e) => {
     setFormData({
@@ -88,7 +88,7 @@ const AdmissionsPage = () => {
     <>
       <Helmet>
         <title>Admissions - MLM Public School</title>
-        <meta name="description" content="Apply for admission to MLM Public School. Enrollment for grades KG to 8th. Start your application today!" />
+        <meta name="description" content="Apply for admission to MLM Public School. Enrollment for classes Nursery to 5th. Start your application today!" />
       </Helmet>
 
       <div className="min-h-screen">
@@ -128,7 +128,7 @@ const AdmissionsPage = () => {
                 Enrollment Information
               </h2>
               <p className="section-shell rounded-[2rem] p-8 text-lg leading-relaxed text-[#4f5a53]">
-                We are accepting applications for grades KG through 8th for the 2026-2027 academic year. 
+                We are accepting applications for classes Nursery through 5th for the 2026-2027 academic year. 
                 Classes begin on <span className="font-semibold text-[#17261f]">February 28, 2026</span>. 
                 Limited seats available - apply early to secure your spot!
               </p>

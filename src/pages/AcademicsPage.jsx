@@ -22,9 +22,9 @@ const AcademicsPage = () => {
 
   const gradeInfo = [
     {
-      grade: 'Kindergarten (KG)',
+      grade: 'Nursery - KG',
       description: 'Foundation for early learning through play-based activities',
-      focus: 'Social skills, basic literacy, numbers, and creative expression'
+      focus: 'Social skills, early literacy, number readiness, and creative expression'
     },
     {
       grade: '1st - 2nd Grade',
@@ -36,18 +36,13 @@ const AcademicsPage = () => {
       description: 'Developing advanced comprehension and critical thinking',
       focus: 'Reading comprehension, multiplication/division, scientific method, and historical thinking'
     },
-    {
-      grade: '6th - 8th Grade',
-      description: 'Preparing for higher education with rigorous curriculum',
-      focus: 'Advanced mathematics, scientific inquiry, essay writing, and analytical skills'
-    }
   ];
 
   return (
     <>
       <Helmet>
         <title>Academics - MLM Public School</title>
-        <meta name="description" content="Blending convent education values with modern teaching methods. Comprehensive curriculum from KG to 8th grade." />
+        <meta name="description" content="Blending convent education values with modern teaching methods. Comprehensive curriculum from Nursery to 5th grade." />
       </Helmet>
 
       <div className="min-h-screen">
