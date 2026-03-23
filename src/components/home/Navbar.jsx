@@ -33,7 +33,7 @@ const Navbar = () => {
       <nav className="container px-4 py-4">
         <div className="flex items-center justify-between gap-4">
           <Link to="/" className="group flex items-center gap-4">
-            <div className="flex h-10 w-60 items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
+            <div className="flex h-auto w-60 items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
               <img src="/MLMLogoBG.png" alt="MLM Public School full logo" className="h-full w-full object-cover" />
             </div>
           </Link>
